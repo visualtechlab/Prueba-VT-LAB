@@ -9,13 +9,13 @@ Esta prueba es muy sencilla, solo tendrás que clonar este proyecto de Unity en 
 Instrucciones:
 
 1. En el primer panel deberás escribir una frase en el campo de texto.
-2. Deberas seleccionar un color, por defecto siempre habrá uno seleccionado.
-3. Al pulsar "Aceptar", debera mostrar el segundo panel con la primera frase escrita al reves en el color que tengamos seleccionado.
-4. Al pulsar en "Volver", deberas limpiarse todos los campos para volver a usarlo con normalidad.
+2. Deberás seleccionar un color, por defecto siempre habrá uno seleccionado.
+3. Al pulsar "Aceptar", deberá mostrar el segundo panel con la primera frase escrita al revás en el color que tengamos seleccionado.
+4. Al pulsar en "Volver", deberás limpiarse todos los campos para volver a usarlo con normalidad.
 
-Los botones con los colores no estan en la interfaz, tendras que integrarlos tu. Esta deberia ser la interfaz:
+Los botones con los colores no están en la interfaz, tendrás que integrarlos tú. Esta deberá ser la interfaz:
 
-![Previsualización de la interfaz](/Interfaz.png "Previsualización primer panel")
+![Previsualización de la interfaz](Interfaz.png "Previsualización primer panel")
 
 Solo deberías necesitar crear un script que ejecute toda esta lógica y comentarlo. 
 La forma en la que lo hagas y las herramientas que utilices son de tu elección.
