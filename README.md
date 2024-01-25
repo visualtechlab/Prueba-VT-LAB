@@ -1,26 +1,45 @@
-# Prueba-VT-LAB
+# Prueba VT-Lab
 
-¡Hola! 
-Con esta prueba solo queremos comprobar tus conocimientos en Unity y C#. 
-Puedes usar cualquier tipo de tecnología o guia, mientras luego lo expliques.
+Prueba de Desarrollo en Unity: Integración de Interfaz de Usuario, API y Scripts
 
-Esta prueba es muy sencilla, solo tendrás que clonar este proyecto de Unity en la versión **2021.3.10f1** en tu equipo. 
+Introducción:
+En esta prueba, se evaluarán tus habilidades en el desarrollo de interfaces de usuario en Unity, la manipulación de datos a través de scripts y la integración con una API externa.
 
 Instrucciones:
 
-1. En el primer panel deberás escribir una frase en el campo de texto.
-2. Deberás seleccionar un color, por defecto siempre habrá uno seleccionado.
-3. Al pulsar "Aceptar", deberá mostrar el segundo panel con la primera frase escrita al revás en el color que tengamos seleccionado.
-4. Al pulsar en "Volver", deberás limpiarse todos los campos para volver a usarlo con normalidad.
+## Parte 0: Setup de la escena
 
-Los botones con los colores no están en la interfaz, tendrás que integrarlos tú. Esta deberá ser la interfaz:
+0.1 Adjunta el script "InterfaceController" como creas adecuado en la escena y asígnale los objetos que vayas a utilizar a los campos vacíos.
 
-![Previsualización de la interfaz](Interfaz.png "Previsualización primer panel")
+## Parte 1: Creación de la Interfaz de Usuario
 
-Solo deberías necesitar crear un script que ejecute toda esta lógica y comentarlo. 
-La forma en la que lo hagas y las herramientas que utilices son de tu elección.
+1.1 Crea una interfaz de usuario similar a la proporcionada en la imagen "Captura_Weather_Panel" (el campo del tiempo puede estar vacío por ahora, no debe tener todo ese texto).
 
-Una vez tengas la prueba completada, deberás hacer un Pull Request. 
-Si ves que se complica hacer un Pull Request, puedes mandar el proyecto en formato ZIP a: joaquinsanchez@vt-lab.com
+![Previsualización de la interfaz](Captura_Weather_Panel.PNG "Previsualización primer panel")
 
-¡Muchas gracias y ánimo!
+## Parte 2: Modificación del Script Existente
+
+2.1 Modifica el script existente proporcionado para que en la función "populateDropdown" el objeto Dropdown se llene dinámicamente con los datos del diccionario "provinceWithId".
+
+## Parte 3: Integración con API
+
+3.1. Implementa la lógica necesaria para enviar una solicitud a la API del tiempo cuya página web es: https://www.el-tiempo.net/api, utilizando el valor correspondiente al elemento seleccionado en el Dropdown como clave del diccionario.
+
+3.2. Maneja la respuesta de la API de manera adecuada y captura el valor relevante, que se usará en la función "writeWeather".
+
+## Parte 4: Gestión de Interfaces
+
+4.1. Añade los listeners necesarios a los botones mediante código.
+
+4.2. Rellena el objeto "resultText" en la nueva interfaz con el valor recibido de la API, haz uso de la función "writeWeather".
+
+4.3. Cierra la interfaz actualmente abierta y abre la nueva, mostrando el tiempo.
+
+## Parte 5: Vuelta al Inicio
+
+5.1 Asegúrate de que el botón salir de la interfaz te devuelve a la pantalla principal y puedes realizar otra búsqueda sin problemas.
+
+## Anotaciones: 
+
+> Se deben utilizar las definiciones de las funciones creadas, no se pueden modificar los nombres ni los parámetros, sólo añadir código dentro de ellas.
+> Las provincias NO están en el orden de su ID, por ejemplo, A Coruña es la primera provincia que se coloca pero su ID no es la 01.

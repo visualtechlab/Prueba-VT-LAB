@@ -23,6 +23,8 @@ public class InterfaceController : MonoBehaviour
     [SerializeField] private GameObject weatherPanel;
     // Botón de búsqueda
     [SerializeField] private Button buttonSearch;
+    // Botón de volver
+    [SerializeField] private Button buttonBack;
 
     Dictionary<string,string> provinceWithId = new Dictionary<string, string>();
 
@@ -77,7 +79,7 @@ public class InterfaceController : MonoBehaviour
     }
 
     /// <summary>
-    /// Función que debe ser llamada cuando se quiera obtener el tiempo atmosférico
+    /// Función que debe ser llamada cuando se quiera obtener el tiempo atmosférico pulsando el botón
     /// </summary>
     private void getWeather()
     {
@@ -99,6 +101,7 @@ public class InterfaceController : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        // Iniciamos la corrutina para conseguir la lista de provincias
         StartCoroutine(provinceRequest());
     }
 }
